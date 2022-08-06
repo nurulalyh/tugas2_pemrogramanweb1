@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Log In - Quick Accsess For Student</title>
+        <link rel="stylesheet" href="style_login.css">
+    </head>
+    <body>
+        <div class="form">
+            <form>
+                <fieldset>
+                    <h3>Log In Ke Quick Accsess For Student</h3>
+                        <p class="username">
+                            Nomor HP, E-Mail atau Username
+                            <br>
+                            <input id="username" type="text" name="username" placeholder="Masukkan Nomor HP/E-mail/Username" style="border-radius: 10px; width: 400px; height: 40px;">
+                        </p>
+                        <p class="password">
+                            Password
+                            <br>
+                            <input id="password" type="password" name="password" placeholder="Masukkan Password" style="border-radius: 10px; width: 400px; height: 40px;">
+                        </p>
+                    <p>
+                    <label><input type="checkbox" name="remember" value="remember" />Remember Me</label>
+                    </p>
+                    <input type="button" class="login" value="Login" onclick="LOGIN()">
+                    <p>
+                        Belum Memiliki akun? <button class="signup"><a href="signup.html">Sign Up</a></button>
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+        <script src="login.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+</html>

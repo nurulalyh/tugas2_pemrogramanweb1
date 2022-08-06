@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;700&family=Edu+NSW+ACT+Foundation:wght@400;700&family=Edu+VIC+WA+NT+Beginner:wght@400;700&family=Open+Sans:ital,wght@1,300;1,700&family=Prompt:ital,wght@1,300;1,600&display=swap');
+
+body {
+	font-family: 'Edu VIC WA NT Beginner', cursive;
+    margin: auto;
+	background-color: aliceblue;
+}
+
+header {
+    background-color: lightblue;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 65px;
+	position: fixed;
+	top: 0;
+}
+
+img {
+	height: 140px;
+	margin-top: -30px;
+}
+
+.log{
+	font-family: 'Edu VIC WA NT Beginner', cursive;
+	margin-right: 10px;
+	height: 30px;
+	margin-top: 15px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: deepskyblue;
+	font-weight: bold;
+	font-size: large;
+	border: 0;
+}
+
+.log a {
+    text-decoration: none;
+    color: black;
+}
+
+.log:hover {
+    background-color: white;
+}
+
+main {
+	margin-top: 65px;
+	height: 700px;
+	display: flex;
+}
+
+.sidebar{
+	background-color: darkslategrey;
+	/* float: left;	
+	width: 18%; */
+	height: 100%;
+	/* position: relative; */
+	width: max-content;
+}
+
+#sidemenu {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+#sidemenu button {
+    margin-top: 30px;
+    width: 190px;
+    height: 40px;
+    border-radius: 20px;
+	border: 0;
+    font-size: medium;
+	font-family: 'Edu VIC WA NT Beginner', cursive;
+	font-weight: bold;
+}
+
+.dipilih {
+	background-color: darkgrey;
+}
+
+.no {
+	background-color: white;
+}
+
+.no:hover {
+    background-color: darkgrey;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+ 
+.content{
+	/* background-color: aliceblue; */
+	/* float: left; */
+	height: 100%;
+	/* width: 82%;	 */
+	/* width: max-content; */
+	max-width: max-content;
+	/* position: relative; */
+}
+
+h1 {
+	text-align: center;
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menu button{
+    margin-top: 30px;
+    width: 300px;
+    height: 150px;
+    border-radius: 40px;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+	border: 0;
+}
+
+.a {
+	background-color: #fdaa56;
+}
+
+.a:hover {
+	background-color: #ffca95;
+}
+
+.b {
+	background-color: #70ff66;
+}
+
+.b:hover {
+	background-color: #97e491;
+}
+
+.c {
+	background-color: #ffea66;
+}
+
+.c:hover {
+	background-color: #fff199;
+}
+
+.d {
+	background-color: lightskyblue;
+}
+
+.d:hover {
+	background-color: #d4f0f0;
+}
+
+.e {
+	background-color: #cbaacb;
+}
+
+.e:hover {
+	background-color: #ecd5e3;
+}
+
+.f {
+	background-color: #ff9cee;
+}
+
+.f:hover {
+	background-color: #ffccf9;
+}
+
+.about {
+	background-color: cornflowerblue;
+	margin: 50px;
+	border-radius: 30px;
+	padding: 20px;
+	text-align: justify;
+}
+
+.about h2 {
+	text-align: center;
+}
+
+footer {
+	flex-flow: wrap;
+	background-color: darkgrey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content: space-evenly;
+}
+
+.profil {
+    margin: 50px 0px 30px 90px;
+}
+
+.profil h1 {
+	text-align: left;
+}
+
+span {
+    color: red;
+}
+
+.contact {
+    margin: 50px 90px 30px 0px;
+}
+
+.contact ul li {
+    list-style: none;
+}
+
+@media only screen and (max-width: 768px) {
+	main {
+		height: 570px;
+	}
+	
+	#sidemenu button {
+		margin-top: 30px;
+		width: 130px;
+		height: 40px;
+		font-size: small;
+	}
+
+	.dashboard h1 {
+		font-size: large;
+	}
+	
+	.menu button {
+		width: 180px;
+		height: 90px;
+		font-size: 12px;
+	}
+
+	.about {
+		font-size: medium;
+		margin: 30px;
+	}
+
+	.profil {
+		width: 40%;
+		margin: 30px 10px 30px 10px;
+	}
+	
+	.profil h1 {
+		font-size: large;
+		text-align: left;
+	}
+
+	.profil p {
+		font-size: small;
+	}
+
+	.profil h3 {
+		font-size: small;
+	}
+	
+	.contact {
+		width: 35%;
+		margin: 30px 0px 30px 10px;
+	}
+
+	.contact h2 {
+		font-size: large;
+	}
+
+	.contact h3 {
+		font-size: small;
+	}
+	
+	.contact ul li {
+		list-style: none;
+		font-size: small;
+	}
+}

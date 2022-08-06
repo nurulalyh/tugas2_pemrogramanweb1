@@ -1,0 +1,273 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulir Registrasi Mahasiswa - Quick Accsess For Student</title>
+        <link rel="stylesheet" href="style_formulir.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="./LogoFix.png" alt="Logo">
+            </div>
+            <input type="button" value="Log Out" class="log" onclick="logout()">
+        </header>
+        <main>			
+            <div class="sidebar">
+                <article id="sidemenu">
+                    <button class="no"><a href="dashboard.html">Dashboard</a></button>
+                    <button class="no"><a href="data_tabel.html">Dosen & Mata Kuliah</a></button>
+                    <button class="dipilih"><a href="formulir.html">Formulir Registrasi Mahasiswa</a></button>
+                </article>
+            </div>
+            <div class="content">
+                <form>
+                    <h2 align="center">Form Registrasi Mahasiswa Jurusan Teknologi Informasi <br>Universitas Tadulako</h2>
+                    <table align="center">
+                        <tr>
+                            <td colspan="3">
+                                <h3>Akun Mahasiswa:</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Nama Lengkap</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input id="name" onkeyup="validateName()" type="text" name="nama" size="30" required>
+                            </td>
+                            <td><span id="name-error"></span></td>
+                        </tr>
+                        <tr>
+                            <td width="150">NIM</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input id="nim" onkeyup="validateNIM()" type="text" name="NIM" size="30" required>
+                            </td>
+                            <td>
+                                <span id="nim-error"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <br> <br>
+                    <table align="center">
+                        <tr>
+                            <td colspan="3">
+                                <h3>Data Diri:</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Nama Depan</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input id="depan" onkeyup="validateDepan()" type="text" name="depan" size="30" required>
+                            </td>
+                            <td>
+                                <span id="depan-error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Nama Belakang</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input id="belakang" onkeyup="validateBelakang()" type="text" name="belakang" size="30" required>
+                            </td>
+                            <td>
+                                <span id="belakang-error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">NIK</td>
+                            <td>:</td>
+                            <td>
+                                <input id="nik" onkeyup="validateNIK()" type="number" name="nik" minlength="16" maxlength="16" required>
+                            </td>
+                            <td>
+                                <span id="nik-error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Tempat Lahir</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input id="tempat" onkeyup="validateTempat()" type="text" name="tempat-lahir" size="30" required>
+                            </td>
+                            <td>
+                                <span id="tempat-error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Tanggal Lahir</td>
+                            <td>:</td>
+                            <td>
+                                <input type="date" name="tanggal-lahir" size="30" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Jenis Kelamin</td>
+                            <td>:</td>
+                            <td>
+                                <input type="radio" name="jk" value="pria" required> Pria
+                                <input type="radio" name="jk" value="wanita" required> Wanita
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Agama</td>
+                            <td>:</td>
+                            <td>
+                                <select name="Agama" required>
+                                    <option value="" selected="selected">--Pilih Agama--</option>
+                                    <option value="islam">Islam</option>
+                                    <option value="kristen">Kristen</option>
+                                    <option value="hindu">Hindu</option>
+                                    <option value="budha">Budha</option>
+                                    <option value="katholik">Katholik</option>
+                                    <option value="konghucu">Konghucu</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Nama Ayah/Ibu/Wali</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input id="ayah" onkeyup="validateAyah()" type="text" name="ayah" size="30" required>
+                            </td>
+                            <td>
+                                <span id="ayah-error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Nomor Telepon</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input id="telepon" onkeyup="validateTelepon()" type="tel" name="tlp" size="30" required>
+                            </td>
+                            <td>
+                                <span id="telepon-error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Alamat</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input id="alamat" onkeyup="validateAlamat()" type="text" name="alamat" size="30" required>
+                            </td>
+                            <td>
+                                <span id="alamat-error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Upload Pas Foto</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input type="file" name="gambar" required>
+                            </td>
+                        </tr>
+                    </table>
+                    <br><br>
+                    <table align="center">
+                        <tr>
+                            <td colspan="3">
+                                <h3>Data Pendidikan:</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Pendidikan Terakhir</td>
+                            <td>:</td>
+                            <td>
+                                <select name="pendidikan" required>
+                                    <option value="" selected="selected">--Pilih Pendidikan Terakhir--</option>
+                                    <option value="ipa">SMA-IPA</option>
+                                    <option value="ips">SMA-IPS</option>
+                                    <option value="bahasa">SMA-Bahasa</option>
+                                    <option value="smk">SMK-RPL</option>
+                                    <option value="smk">SMK-Non RPL</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Nama Sekolah</td>
+                            <td>:</td>
+                            <td align="center">
+                                <input id="sekolah" onkeyup="validateSekolah()" type="text" name="sekolah" size="30" required>
+                            </td>
+                            <td>
+                                <span id="sekolah-error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150">Pilihan Program Studi</td>
+                            <td>:</td>
+                            <td>
+                                <select name="prodi" required>
+                                    <option value="" selected="selected">--Pilih Program Studi--</option>
+                                    <option value="sipil">S1-Teknik Sipil</option>
+                                    <option value="geologi">S1-Teknik Geologi</option>
+                                    <option value="lingkungan">S1-Teknik Lingkungan</option>
+                                    <option value="elektro">S1-Teknik Elektro</option>
+                                    <option value="listrik">D3-Teknik Listrik</option>
+                                    <option value="arsitektur">S1-Teknik Arsitektur</option>
+                                    <option value="pwk">S1-Perencanaan Wilayah Kota</option>
+                                    <option value="mesin">S1-Teknik Mesin</option>
+                                    <option value="d3-mesin">D3-Teknik Mesin</option>
+                                    <option value="informatika">S1-Teknik Informatika</option>
+                                    <option value="informasi">S1-Sistem Informasi</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table align="center">
+                        <tr>
+                            <td width="385">
+                                <p>Dengan ini, saya menyatakan data yang dimasukkan telah sesuai dengan data diri saya</p>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="cek" value="cek" required>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table align="center">
+                        <tr>
+                            <td>
+                                <input type="button" id="submit" value="SUBMIT">
+                            </td>
+                            <td>
+                                <input id="reset" type="reset" value="RESET">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="profil">
+                <h1>Quick Accsess For Student</h1>
+                <p>
+                    " To accomplish great things, we must not only act, but also dream, not only plan, but also believe." - Anatole France
+                    <br>
+                    " Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence." - Hellen Keller
+                    <br>
+                    " Setting goals is the first step in turning the invisible into the visible." - Tony Robbins
+                </p>
+                <h3>Enjoy Your Study <span>&hearts;</span></h3>
+            </div>
+            <div class="contact">
+                <ul>
+                    <h2>Contact Us</h2>
+                    <h3>
+                        Nurul Aliyah Dyah Sakhinah
+                        <br>
+                        F55121069
+                    </h3>
+                    <li>0821-9688-4473</li>
+                    <li>@nurulalyh_______</li>
+                    <li>nurulaliyah2303@gmail.com</li>
+                    <li>www.linkedin.com/in/nurulaliyahdyahsakhinah</li>
+                    <li></li>
+                </ul>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="formulir.js"></script>
+    </body>
+</html>

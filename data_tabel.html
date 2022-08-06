@@ -1,0 +1,228 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dosen & Mata Kuliah - Quick Accsess For Student</title>
+        <link rel="stylesheet" href="style_datatabel.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="datatabel.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="./LogoFix.png" alt="Logo">
+            <input type="button" value="Log Out" class="log" onclick="logout()">
+        </header>
+        <main>			
+            <div class="sidebar">
+                <article id="sidemenu">
+                    <button class="no"><a href="dashboard.html">Dashboard</a></button>
+                    <button class="dipilih"><a href="data_tabel.html">Dosen & Mata Kuliah</a></button>
+                    <button class="no"><a href="formulir.html">Formulir Registrasi Mahasiswa</a></button>
+                </article>
+            </div>
+            <div class="content">
+                <h3>DAFTAR MATA KULIAH DAN DOSEN PENGAJAR PRODI TEKNIK INFORMATIKA</h3>
+                <br>
+                <table align="center" id="tabelsaya" class="display">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Kode Mata Kuliah</th>
+                            <th>Nama Mata Kuliah</th>
+                            <th>SKS</th>
+                            <th>Nama Dosen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="4">1.</td>
+                        <td rowspan="4">F09171002</td>
+                        <td rowspan="4">Dasar Pemrograman</td>
+                        <td rowspan="4">4</td>
+                        <td>Dessy Santi, S.Kom., M.T.</td>
+                    </tr>
+                    <tr>
+                        <td>Syahrullah, S.Kom., M.Kom</td>
+                    </tr>
+                    <tr>
+                        <td>Fizar Syafa'at, S.Kom., M.Kom</td>
+                    </tr>
+                    <tr>
+                        <td>Dewi Kusumawati, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">2.</td>
+                        <td rowspan="4">F09171005F</td>
+                        <td rowspan="4">Struktur Data</td>
+                        <td rowspan="4">4</td>
+                        <td>Ir. Syahrullah, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Fizar Syafaat, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Ilman Pradhana, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Dewi Kusumawati, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">3.</td>
+                        <td rowspan="5">F09171010F</td>
+                        <td rowspan="5">Basis Data</td>
+                        <td rowspan="5">4</td>
+                        <td>Dr. Ir. Anita Ahmad Kasim, S.Kom., M.Cs.</td>
+                    </tr>
+                    <tr>
+                        <td>Wirdayanti, S.T., M.Eng.</td>
+                    </tr>
+                    <tr>
+                        <td>Ir. Hajra Rasmita Ngemba, S.Kom., M.M., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Ir. Syahrullah, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Dewi Kusumawati, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">4.</td>
+                        <td rowspan="3">U00131011</td>
+                        <td rowspan="3">Matematika Dasar</td>
+                        <td rowspan="3">3</td>
+                        <td>Mukaddas,S.T.,M.T</td>
+                    </tr>
+                    <tr>
+                        <td>Dwi Shinta Angreni, S.Si., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Eng. Ir. Andi Rusdin, S,T., M.T., M.Sc.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">5.</td>
+                        <td rowspan="3">F09171009F</td>
+                        <td rowspan="3">Rekayasa Perangkat Lunak</td>
+                        <td rowspan="3">3</td>
+                        <td>Wirdayanti, S.T., M.Eng.</td>
+                    </tr>
+                    <tr>
+                        <td>Dewi Kusumawati, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Dessy Santi, S.Kom., M.T.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">6.</td>
+                        <td rowspan="3">F09171016F</td>
+                        <td rowspan="3">Kecerdasan Buatan</td>
+                        <td rowspan="3">3</td>
+                        <td>Dwi Shinta Angraeni, S.Si., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Rahma Laila, S.SI.,M.Kom</td>
+                    </tr>
+                    <tr>
+                        <td>Ilman Pradana, S.Kom.,M.Kom</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">7.</td>
+                        <td rowspan="4">F09171020</td>
+                        <td rowspan="4">Pemrograman Web 2</td>
+                        <td rowspan="4">3</td>
+                        <td>Dessy Santi, S.Kom., M.T.</td>
+                    </tr>
+                    <tr>
+                        <td>Jafar Sadik, S.Kom., M.Kom</td>
+                    </tr>
+                    <tr>
+                        <td>Ir. Syaiful Hendra, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Ir. Kadek Agus Dwi Wijaya, S.T., M.M.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">8.</td>
+                        <td rowspan="4">F09171021</td>
+                        <td rowspan="4">Perancangan dan Analisis Algoritma 2</td>
+                        <td rowspan="4">3</td>
+                        <td>Dr. Ir. Anita Ahmad Kasim, S.Kom., M.Cs.</td>
+                    </tr>
+                    <tr>
+                        <td>Dewi Kusumawati, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Jafar Sadik, S.Kom., M.Kom</td>
+                    </tr>
+                    <tr>
+                        <td>Dessy Santi, S.Kom., M.T.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">9.</td>
+                        <td rowspan="4">F09171024F</td>
+                        <td rowspan="4">Sistem Informasi Geografis 1</td>
+                        <td rowspan="4">3</td>
+                        <td>Ir. Hajra Rasmita Ngemba, S.Kom., M.M., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Rusydi</td>
+                    </tr>
+                    <tr>
+                        <td>Ilman Pradana, S.Kom., M.Kom</td>
+                    </tr>
+                    <tr>
+                        <td>Feishal Reza, S.T.,M.T</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">10.</td>
+                        <td rowspan="4">F09171026F</td>
+                        <td rowspan="4">Pengolahan Citra Digital</td>
+                        <td rowspan="4">3</td>
+                        <td>Dr. Ir. Anita Ahmad Kasim, S.Kom., M.Cs.</td>
+                    </tr>
+                    <tr>
+                        <td>Ryfial Azhar, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>Jafar Sadik, S.Kom., M.Kom</td>
+                    </tr>
+                    <tr>
+                        <td>Dwi Shinta Angreni, S.Si., M.Kom.</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <div class="profil">
+                <h1>Quick Accsess For Student</h1>
+                <p>
+                    " To accomplish great things, we must not only act, but also dream, not only plan, but also believe." - Anatole France
+                    <br>
+                    " Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence." - Hellen Keller
+                    <br>
+                    " Setting goals is the first step in turning the invisible into the visible." - Tony Robbins
+                </p>
+                <h3>Enjoy Your Study <span>&hearts;</span></h3>
+            </div>
+            <div class="contact">
+                <ul>
+                    <h2>Contact Us</h2>
+                    <h3>
+                        Nurul Aliyah Dyah Sakhinah
+                        <br>
+                        F55121069
+                    </h3>
+                    <li>0821-9688-4473</li>
+                    <li>@nurulalyh_______</li>
+                    <li>nurulaliyah2303@gmail.com</li>
+                    <li>www.linkedin.com/in/nurulaliyahdyahsakhinah</li>
+                    <li></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
